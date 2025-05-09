@@ -6,18 +6,21 @@
 package it.unipd.mtss;
 
 public class IntegerToRoman {
-
     //Funzione che converte da numero intero a stringa di numero romano
     public static String convert(int number) {
-        String[] romanLetters = { "I" };
-        int[] values = { 1 };
+
+        String[] romanLetters = { "V", "IV", "I" };
+        int[] values = { 5, 4, 1 };
+
         StringBuilder romanNumber = new StringBuilder();
+
         for (int i = 0; i < values.length; i++) {
             while (number >= values[i]) {
                 number -= values[i];
                 romanNumber.append(romanLetters[i]);
             }
         }
+
         return romanNumber.toString();
     }
 }
