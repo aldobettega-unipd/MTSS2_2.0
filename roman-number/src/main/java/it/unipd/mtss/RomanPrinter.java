@@ -14,9 +14,10 @@ public class RomanPrinter {
     private static String printAsciiArt(String romanNumber) {
         StringBuilder asciiArt = new StringBuilder();
         String[][] asciiLetters = {
-                { " _____ ", "|_   _|", "  | |  ", "  | |  ", " _| |_ ", "|_____|" }
+                { " _____ ", "|_   _|", "  | |  ", "  | |  ", " _| |_ ", "|_____|" },
+                { "__      __", "\\ \\    / /", " \\ \\  / / ", "  \\ \\/ /  ", "   \\  /   ", "    \\/    " },
         };
-        String letters = "I";
+        String letters = "IV";
         for (int row = 0; row < 6; row++) {
             for (char c : romanNumber.toCharArray()) {
                 int index = letters.indexOf(c);
