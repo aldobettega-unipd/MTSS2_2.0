@@ -16,8 +16,9 @@ public class RomanPrinter {
         String[][] asciiLetters = {
                 { " _____ ", "|_   _|", "  | |  ", "  | |  ", " _| |_ ", "|_____|" },
                 { "__      __", "\\ \\    / /", " \\ \\  / / ", "  \\ \\/ /  ", "   \\  /   ", "    \\/    " },
+                { "__   __", "\\ \\ / /", " \\ V / ", "  > <  ", " / . \\ ", "/_/ \\_\\" }
         };
-        String letters = "IV";
+        String letters = "IVX";
         for (int row = 0; row < 6; row++) {
             for (char c : romanNumber.toCharArray()) {
                 int index = letters.indexOf(c);
