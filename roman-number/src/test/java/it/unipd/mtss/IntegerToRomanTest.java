@@ -18,7 +18,10 @@ public class IntegerToRomanTest {
             "3, III",
             "4, IV",
             "5, V",
-            "6, VI"
+            "6, VI",
+            "7, VII",
+            "9, IX",
+            "10, X"
     })
     //Funzione che testa se la funzione convert restituisce la stringa del corrispettivo numero romano
     public void testConvert(int input, String expectedOutput) {
