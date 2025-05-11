@@ -38,7 +38,13 @@ public class IntegerToRomanTest {
             "399, CCCXCIX",
             "400, CD",
             "444, CDXLIV",
-            "500, D"
+            "500, D",
+            "600, DC",
+            "700, DCC",
+            "800, DCCC",
+            "900, CM",
+            "949, CMXLIX",
+            "1000, M"
 
     })
     // Funzione che testa se la funzione convert restituisce la stringa del
