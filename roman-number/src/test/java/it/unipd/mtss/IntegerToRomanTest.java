@@ -6,10 +6,47 @@
 package it.unipd.mtss;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
 public class IntegerToRomanTest {
+
+    @Test
+    // Funzione che testa se la funzione checkInt restituisca Null input quando non
+    // gli viene passato un oggetto
+    public void testNull() {
+        IllegalArgumentException exception = assertThrows(
+                IllegalArgumentException.class,
+                () -> IntegerToRoman.checkInt(null));
+        assertEquals("Null input", exception.getMessage());
+    }
+
+    @Test
+    // Funzione che testa se la funzione checkInt restituisca Invalid number quando
+    // gli viene passatto un oggetto che non si converte in integer
+    public void testInvalidNumber() {
+        IllegalArgumentException exception = assertThrows(
+                IllegalArgumentException.class,
+                () -> IntegerToRoman.checkInt(new Object()));
+        assertEquals("Invalid number", exception.getMessage());
+    }
+
+    @ParameterizedTest
+    @CsvSource({
+            "0, Il numero deve essere compreso tra 1 e 1000",
+            "-1, Il numero deve essere compreso tra 1 e 1000",
+            "1001, Il numero deve essere compreso tra 1 e 1000"
+    })
+    // Funzione che testa se la funzione convert restituisca l'errore corretto
+    // quando gli viene passato come parametro un numero fuori dal range
+    public void testInvalidRange(int input, String expectedOutput) {
+        IllegalArgumentException exception = assertThrows(
+                IllegalArgumentException.class,
+                () -> IntegerToRoman.convert(input));
+        assertEquals(expectedOutput, exception.getMessage());
+    }
 
     @ParameterizedTest
     @CsvSource({
