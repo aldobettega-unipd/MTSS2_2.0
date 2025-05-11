@@ -25,9 +25,12 @@ public class IntegerToRomanTest {
             "15, XV",
             "19, XIX",
             "20, XX",
-            "30, XXX"
+            "30, XXX",
+            "40, XL",
+            "50, L"
     })
-    //Funzione che testa se la funzione convert restituisce la stringa del corrispettivo numero romano
+    // Funzione che testa se la funzione convert restituisce la stringa del
+    // corrispettivo numero romano
     public void testConvert(int input, String expectedOutput) {
         assertEquals(expectedOutput, IntegerToRoman.convert(input));
     }
