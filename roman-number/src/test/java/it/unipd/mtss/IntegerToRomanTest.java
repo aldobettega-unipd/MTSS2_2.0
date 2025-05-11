@@ -32,7 +32,13 @@ public class IntegerToRomanTest {
             "70, LXX",
             "80, LXXX",
             "90, XC",
-            "100, C"
+            "100, C",
+            "200, CC",
+            "300, CCC",
+            "399, CCCXCIX",
+            "400, CD",
+            "444, CDXLIV",
+            "500, D"
 
     })
     // Funzione che testa se la funzione convert restituisce la stringa del
